@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stith Mod 6 : Assignment</title>
+    <script
+      src="https://kit.fontawesome.com/1556fe9aa3.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="/css/Main.css" />
+  </head>
+  <body>
+    <nav></nav>
+    <main>
+      <div class="index-info">
+        <h1>Feel your best Gym</h1>
+        <h3>The worlds gym</h3>
+        <p>
+          we offer unique services like rock climbing swimming lessons and all
+          sorts of different class the will help you get to the best version of
+          you
+        </p>
+        <div class="align">
+        <input type="button" id="join-now" class="btn" value="Add New Member" />
+        <input
+          type="button"
+          id="list-members"
+          class="btn"
+          value="See Members"
+        />
+      </div>
+      </div>
+
+      <div id="newMember" style="display: none">
+        <form id="addMembers">
+          <label for="fNameInput">First Name</label>
+          <input id="fNameInput" type="text" required />
+
+          <label for="lNameInput">Last Name</label>
+          <input id="lNameInput" type="text" required />
+
+          <label for="uNameInput">User Name</label>
+          <input id="uNameInput" type="text" required />
+
+          <label for="enrollDateInput">Enrollment Date</label>
+          <input id="enrollDateInput" type="date" required />
+
+          <label for="birthDateInput">Birthday</label>
+          <input id="birthDateInput" type="date" required />
+
+          <select id="select" required>
+            <option disabled selected>Select your Interest</option>
+            <option value="Classes">Classes</option>
+            <option value="Pool">Pool</option>
+            <option value="RockClimbing">Rock Climbing</option>
+          </select>
+
+          <input type="submit" value="Add Members" />
+        </form>
+      </div>
+
+      <div id="list" style="display: none">
+        <div class="container">
+          <div class="form">
+            <form id="interests">
+              <div class="block">
+                <label for="keywordFilter">Keyword</label>
+                <input id="keywordFilter" />
+
+                <label for="Sort">Sort by: </label>
+                <select id="Sort">
+                  <option value="fName">first name</option>
+                  <option value="lName">last name</option>
+                  <option value="name">name</option>
+                  <option value="id">ID</option>
+                  <option value="uName">UserName</option>
+                  <option value="enrollment">Enrollment date</option>
+                </select>
+              <div class="block">
+                <input type="checkbox" id="Classes" />
+                <label for="Classes">Classes</label>
+              </div>
+              <div class="block">
+                <input type="checkbox" id="Pool" />
+                <label for="Pool">Pool</label>
+
+                <div class="block">
+                  <input type="checkbox" id="RockClimbing" />
+                  <label for="RockClimbing">Rock Climbing</label>
+                </div>
+                <div class="block">
+                  <input type="submit" value="submit" />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div></div>
+          <div id="card-list">
+            <div class="member-card">
+              <i class="fa-solid fa-dumbbell"></i>
+              <p><b>ID:</b>00001</p>
+              <p><b>First Name:</b> Lia</p>
+              <p><b>Last Name:</b> Stith</p>
+              <p><b>UserName:</b>StithLia00001</p>
+              <p><b>Age:</b> 19</p>
+              <p><b>Enrollment Date:</b> 10/18/2003</p>
+              <p><b>Interest:</b> Classes</p>
+              <input
+                id="remove-Member"
+                type="button"
+                class="btn"
+                value="Delete Member"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="/js/Menu.js"></script>
+    <script src="/js/Main.js"></script>
+  </body>
+</html>
